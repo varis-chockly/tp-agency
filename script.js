@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let maxIndex = totalCards - visibleCards;
     let startX = 0;
     let isDragging = false;
+    let startTouchX = 0;
 
     function updateSliderConfig() {
         const screenWidth = window.innerWidth;
@@ -52,62 +53,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function handleMouseDown(e) {
-        startX = e.pageX;
-        isDragging = true;
-    }
-
-    function handleMouseMove(e) {
-        if (!isDragging) return;
-        const moveX = e.pageX - startX;
-        cards.style.transform = `translateX(${-currentIndex * cardWidth + moveX}px)`;
-    }
-
-    function handleMouseUp(e) {
-        if (!isDragging) return;
-        const moveX = e.pageX - startX;
-        if (moveX > 100 && currentIndex > 0) {
-            currentIndex--;
-        } else if (moveX < -100 && currentIndex < maxIndex) {
-            currentIndex++;
-        }
-        updateSlider();
-        isDragging = false;
-    }
-
     function handleTouchStart(e) {
-        startX = e.touches[0].pageX;
+        startX = cards.scrollLeft + e.touches[0].clientX;
+        startTouchX = e.touches[0].clientX;
         isDragging = true;
     }
 
     function handleTouchMove(e) {
         if (!isDragging) return;
-        const moveX = e.touches[0].pageX - startX;
-        cards.style.transform = `translateX(${-currentIndex * cardWidth + moveX}px)`;
+        const touchX = e.touches[0].clientX;
+        const moveX = startTouchX - touchX;
+        cards.scrollLeft = startX + moveX;
     }
 
     function handleTouchEnd(e) {
         if (!isDragging) return;
-        const moveX = e.changedTouches[0].pageX - startX;
-        if (moveX > 100 && currentIndex > 0) {
-            currentIndex--;
-        } else if (moveX < -100 && currentIndex < maxIndex) {
-            currentIndex++;
+        isDragging = false;
+        const touchX = e.changedTouches[0].clientX;
+        const moveX = startTouchX - touchX;
+        if (Math.abs(moveX) > 50) { // adjust threshold as needed
+            if (moveX > 0 && currentIndex < maxIndex) {
+                currentIndex++;
+            } else if (moveX < 0 && currentIndex > 0) {
+                currentIndex--;
+            }
         }
         updateSlider();
-        isDragging = false;
     }
 
     // Initialize slider
     updateSliderConfig();
     window.addEventListener('resize', updateSliderConfig);
 
-    // Add event listeners
-    cards.addEventListener('mousedown', handleMouseDown);
-    cards.addEventListener('mousemove', handleMouseMove);
-    cards.addEventListener('mouseup', handleMouseUp);
-    cards.addEventListener('mouseleave', handleMouseUp);
-
+    // Add touch event listeners
     cards.addEventListener('touchstart', handleTouchStart);
     cards.addEventListener('touchmove', handleTouchMove);
     cards.addEventListener('touchend', handleTouchEnd);
