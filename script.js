@@ -4,14 +4,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const dotsContainer = document.querySelector('.dots');
     
     let currentIndex = 0;
-    const cardWidth = 320; // 300px card width + 20px margin
+    let cardWidth = 320; // Default: 300px card width + 20px margin
+    let visibleCards = 3;
     const totalCards = document.querySelectorAll('.card').length;
-    const visibleCards = 3;
-    const maxIndex = totalCards - visibleCards;
+    let maxIndex = totalCards - visibleCards;
     let startX = 0;
     let isDragging = false;
 
+    function updateSliderConfig() {
+        const screenWidth = window.innerWidth;
+        if (screenWidth <= 480) {
+            cardWidth = 155; // 150px card width + 5px margin
+            visibleCards = 2;
+        } else if (screenWidth <= 768) {
+            cardWidth = 210; // 200px card width + 10px margin
+            visibleCards = 3;
+        } else {
+            cardWidth = 320; // 300px card width + 20px margin
+            visibleCards = 3;
+        }
+        maxIndex = Math.max(0, totalCards - visibleCards);
+        createDots();
+        updateSlider();
+    }
+
     function createDots() {
+        dotsContainer.innerHTML = ''; // Clear existing dots
         for (let i = 0; i <= maxIndex; i++) {
             const dot = document.createElement('div');
             dot.classList.add('dot');
@@ -81,8 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initialize slider
-    createDots();
-    updateSlider();
+    updateSliderConfig();
+    window.addEventListener('resize', updateSliderConfig);
 
     // Add event listeners
     cards.addEventListener('mousedown', handleMouseDown);
