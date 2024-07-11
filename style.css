@@ -1,0 +1,40 @@
+.card-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cards {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.card {
+    flex: 0 0 300px;
+    margin-right: 20px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #333;
+}
+
+.logo{
+    width: 30px;
+    height: 30px;
+}
