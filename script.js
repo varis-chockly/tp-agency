@@ -14,14 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateSliderConfig() {
         const screenWidth = window.innerWidth;
-        if (screenWidth <= 480) {
-            cardWidth = 155; // 150px card width + 5px margin
-            visibleCards = 2;
-        } else if (screenWidth <= 768) {
-            cardWidth = 210; // 200px card width + 10px margin
-            visibleCards = 3;
+        if (screenWidth <= 768) {
+            cardWidth = cards.offsetWidth; // Set card width to match container width
+            visibleCards = 1; // Show only one card at a time on smaller screens
         } else {
-            cardWidth = 320; // 300px card width + 20px margin
+            cardWidth = 320; // Default: 300px card width + 20px margin
             visibleCards = 3;
         }
         maxIndex = Math.max(0, totalCards - visibleCards);
@@ -81,6 +78,16 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSlider();
     }
 
+    function handleKeyDown(e) {
+        if (e.key === 'ArrowLeft' && currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+        } else if (e.key === 'ArrowRight' && currentIndex < maxIndex) {
+            currentIndex++;
+            updateSlider();
+        }
+    }
+
     // Initialize slider
     updateSliderConfig();
     window.addEventListener('resize', updateSliderConfig);
@@ -89,4 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cards.addEventListener('touchstart', handleTouchStart);
     cards.addEventListener('touchmove', handleTouchMove);
     cards.addEventListener('touchend', handleTouchEnd);
+
+    // Add keyboard event listener
+    document.addEventListener('keydown', handleKeyDown);
 });
