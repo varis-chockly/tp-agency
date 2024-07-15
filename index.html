@@ -1,3 +1,5 @@
+
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +13,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-primary">
+    <nav class="navbar navbar-expand-lg bg-dark p-0">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#"><img class="logo" src="./WhatsApp Image 2024-07-07 at 23.01.10_96ca6f0f.jpg" alt=""> News Paper Agency</a>
+            <a class="navbar-brand text-white" href="#"><img class="logo" src="./WhatsApp Image 2024-07-07 at 23.01.10_96ca6f0f.jpg" alt=""> TP News Paper Agency</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,21 +28,21 @@
                         <a class="nav-link text-danger" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Dropdown
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item " href="#">Action</a></li>
+                            <li><a class="dropdown-item " href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider "></li>
+                            <li><a class="dropdown-item " href="#">Something else here</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <a class="nav-link disabled text-white" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
+                <form class="d-flex m-2" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-danger" type="submit">Search</button>
                 </form>
@@ -49,7 +51,7 @@
     </nav>
 
     <div class="container mt-3">
-        <h2>Available News Papers</h2>
+        <h3 class="week">Available News Papers</h3>
         <div class="card-slider" data-slider="1">
             <div class="cards">
                 <!-- First set of cards -->
@@ -60,6 +62,7 @@
                 <div class="card text-center p-3" style="width: 300px; height: 300px;">
                     <div class="card-body" style="background-image: url('./madhrboomi.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
+                <!-- Remaining cards -->
                 <div class="card text-center p-3" style="width: 300px; height: 300px;">
                     <div class="card-body" style="background-image: url('./suprabadham.jpeg'); background-size: cover; background-position: center;"></div>
                 </div>
@@ -89,147 +92,58 @@
                 </div>
                 <div class="card text-center p-3" style="width: 300px; height: 300px;">
                     <div class="card-body" style="background-image: url('./express2.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
+                </div> 
             </div>
             <div class="dots"></div>
         </div>
 
-        <h2>Other News Papers</h2>
-        <div class="card-slider" data-slider="2">
-            <div class="cards">
+        <h3 class="week">Available weekly of the News papers</h3>
+        <div style="width: 100%;" class="card-slider" data-slider="2">
+            <div class="cards other-news-cards">
                 <!-- Second set of cards (duplicated) -->
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./manorama.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card text-center p-3 rectangle-card"  >
+                    <div class="card-body" style="background-image: url('madyamamw.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <!-- Repeat for all cards as required -->
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./madhrboomi.jpg'); background-size: cover; background-position: center;"></div>
+                <!-- Repeat for all cards as needed -->
+                <div class="card text-center p-3 rectangle-card">
+                    <div class="card-body" style="background-image: url('arogyamassika.webp'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./suprabadham.jpeg'); background-size: cover; background-position: center;"></div>
+                <!-- Remaining cards -->
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('madhruboomiw.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./madyamam\ 1.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('manoramaw.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./chandrika1.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('vanitha.jpeg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./siraj2.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('grahalakshmi.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./dheshabimani1.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('madyamamw.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./janayugam2.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('madyamamw.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./janmaboomi3.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('madyamamw.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./veekshanam.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('madyamamw.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./thehindu3.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('madyamamw.jpg'); background-size: cover; background-position: center;"></div>
                 </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./express2.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
+                <div class="card text-center p-3" >
+                    <div class="card-body" style="background-image: url('madyamamw.jpg'); background-size: cover; background-position: center;"></div>
+                </div> 
             </div>
             <div class="dots"></div>
         </div>
     </div>
-    <div class="container mt-4">
-        <h2>Available News Papers</h2>
-        <div class="card-slider" data-slider="1">
-            <div class="cards">
-                <!-- First set of cards -->
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./manorama.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <!-- Repeat for all cards as required -->
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./madhrboomi.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./suprabadham.jpeg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./madyamam\ 1.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./chandrika1.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./siraj2.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./dheshabimani1.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./janayugam2.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./janmaboomi3.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./veekshanam.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./thehindu3.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./express2.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-            </div>
-            <div class="dots"></div>
-        </div>
-
-        <h2>Other News Papers</h2>
-        <div class="card-slider" data-slider="2">
-            <div class="cards">
-                <!-- Second set of cards (duplicated) -->
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./manorama.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <!-- Repeat for all cards as required -->
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./madhrboomi.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./suprabadham.jpeg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./madyamam\ 1.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./chandrika1.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./siraj2.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./dheshabimani1.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./janayugam2.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./janmaboomi3.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./veekshanam.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./thehindu3.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-                <div class="card text-center p-3" style="width: 300px; height: 300px;">
-                    <div class="card-body" style="background-image: url('./express2.jpg'); background-size: cover; background-position: center;"></div>
-                </div>
-            </div>
-            <div class="dots"></div>
-        </div>
-    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <script src="script.js"></script>

@@ -97,10 +97,14 @@ document.addEventListener('DOMContentLoaded', function() {
         cards.addEventListener('touchend', handleTouchEnd);
 
         // Add keyboard event listener
-        document.addEventListener('keydown', handleKeyDown);
+        slider.addEventListener('keydown', handleKeyDown);
     }
 
     // Initialize all sliders
     const sliders = document.querySelectorAll('.card-slider');
-    sliders.forEach(initializeSlider);
+    sliders.forEach(slider => {
+        initializeSlider(slider);
+        // Make each slider focusable and add keyboard navigation
+        slider.setAttribute('tabindex', '0');
+    });
 });
